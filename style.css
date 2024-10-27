@@ -1,0 +1,87 @@
+@font-face {
+  font-family: 'Metamorphous';
+  src: url('./fonts/Metamorphous-Regular.ttf') format('truetype');
+}
+
+:root {
+  --background-color: #f0f0f0;
+  --form-background-color: #fff;
+  --overlay-color: rgba(0, 0, 0, 0.2);
+  --button-color: #4CAF50;
+  --button-hover-color: #45a049;
+  --text-color: #333;
+  --logo-color: #222;
+  --logo-size: 150px;
+  --padding: 20px;
+}
+
+html {
+  background-color: royalblue;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--background-color, lightgrey);
+  margin: 0;
+}
+
+.form-container {
+  display: flex;
+  width: 90%;
+  max-width: 900px;
+  height: 600px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  background-color: var(--form-background-color, white);
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.test {
+  font-family: 'Metamorphous', sans-serif;
+}
+
+.image-section {
+  flex: 1;
+  background-image: url('./images/mosque-background.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.logo-overlay {
+  position: absolute;
+  top: 25%;
+  left: 0; /* align left edge */
+  width: 100%;
+  background-color: var(--overlay-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--logo-color);
+}
+
+.logo {
+  width: var(--logo-size);
+  height: auto;
+  margin-right: 10px; /* space between logo and text */
+  margin-left: -40px; /* remove extra space from logo background */
+}
+
+.logo-text {
+  font-size: 2em;
+  color: var(--logo-color);
+  font-family: 'Metamorphous', sans-serif;
+  white-space: nowrap; /* prevent text from wrapping */
+}
+
+.form-section {
+  flex: 2;
+  padding: var(--padding)*2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--text-color);
+}
