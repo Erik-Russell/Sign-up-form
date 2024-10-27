@@ -12,16 +12,65 @@
         <img src='images/logo.png' alt='Logo' class='logo'>
         <span class='logo-text'>Al-Fajr</span>
       </div>
+      <div class="photo-credit">Photo by <a href='https://unsplash.com/@lodhi9090?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash'>HAMEED ULLAH</a> on <a href='https://unsplash.com/photos/white-mosque-under-gray-sky-during-daytime-eeI0al-Qx8k?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash'>Unsplash</a></div>
     </div>
     <div class="form-section">
-      <form action="">
-        <h2>FORM HEADER</h2>
-        <label for="name">Name</label>
-        <input type="text" id='name' name='name'>
-        <button type='submit'>Submit</button>
-      </form>
+      <!-- Upper Section: Message -->
+      <div class="form-message">
+        <p>Join us today for exclusive benefits and a personalized experience!</p>
+      </div>
+
+      <!-- Middle Section: Input Fields -->
+      <div class="form-inputs">
+        <div class="input-group">
+          <label for="first-name">First Name</label>
+          <input type="text" id="first-name" name="first-name" required pattern="[A-Za-z]+" title="Please enter a valid name.">
+        </div>
+
+        <div class="input-group">
+          <label for="last-name">Last Name</label>
+          <input type="text" id="last-name" name="last-name" required pattern="[A-Za-z]+" title="Please enter a valid name.">
+        </div>
+
+        <div class="input-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="input-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" pattern="^\d{10}$" title="Please enter a 10-digit phone number." required>
+        </div>
+
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" minlength="8" required title="Password must be at least 8 characters.">
+        </div>
+
+        <div class="input-group">
+          <label for="confirm-password">Confirm Password</label>
+          <input type="password" id="confirm-password" name="confirm-password" required title="Please confirm your password.">
+        </div>
+      </div>
+
+      <!-- Bottom Section: Button and Login Link -->
+      <div class="form-footer">
+        <button type="submit">Create Account</button>
+        <p>Already have an account? <a href="login-link">Log in</a></p>
+      </div>
     </div>
   </div>
 </body>
+<script>
+  document.querySelector("form").addEventListener("submit", function(event) {
+    const password = document.getElementById("password").value;
+    const confirmPassword = document.getElementById("confirm-password").value;
+
+    if (password !== confirmPassword) {
+      event.preventDefault();
+      alert("Passwords do not match.");
+    }
+  });
+</script>
 </html>
 <!-- Photo by <a href='https://unsplash.com/@lodhi9090?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash'>HAMEED ULLAH</a> on <a href='https://unsplash.com/photos/white-mosque-under-gray-sky-during-daytime-eeI0al-Qx8k?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash'>Unsplash</a> -->
